@@ -79,10 +79,12 @@ func initPg() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	err = db.Ping()
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	log.Info("Postgres ping successful")
 }
 
@@ -96,6 +98,7 @@ func initRedis() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	log.Info("Redis Cluster ping successful")
 }
 
