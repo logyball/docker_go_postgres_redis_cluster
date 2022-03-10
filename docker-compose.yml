@@ -1,0 +1,35 @@
+version: "3.5"
+
+services:
+  postgres:
+    container_name: pg
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: demo
+    ports:
+      - "6000:5432"
+    volumes:
+      - pg:/var/lib/postgresql/data
+
+  redis-cluster:
+    container_name: redis_cluster
+    image: grokzen/redis-cluster:latest
+    ports:
+      - "7000:7000"
+      - "7001:7001"
+      - "7002:7002"
+      - "7003:7003"
+      - "7004:7004"
+      - "7005:7005"
+      - "7006:7006"
+      - "7007:7007"
+    environment:
+      - IP=0.0.0.0
+    volumes:
+      - redis_cluster:/data
+
+volumes:
+  pg:
+  redis_cluster:
