@@ -1,5 +1,7 @@
 # Golang, Redis Cluster Mode, Postgres
 
+[See this blog post.](https://loganballard.com/index.php/2022/03/10/redis-cluster-mode-postgres-sql-golang-and-docker/)
+
 A very quick http server intended to demonstrate ability to spin up a local application stack:
 
 1. Go backend using native `http` server

@@ -90,8 +90,7 @@ func initPg() {
 
 func initRedis() {
 	rdb = redis.NewClusterClient(&redis.ClusterOptions{
-		Addrs:      redisHostList,
-		MaxRetries: 10,
+		Addrs: redisHostList,
 	})
 
 	err := rdb.Ping(ctx).Err()
